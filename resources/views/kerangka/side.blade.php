@@ -64,6 +64,22 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
+            <a href="{{ route('tentang.index') }}" class="nav-link @yield('tentang')"> 
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Profile P. LIRA
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="{{ route('contact.index') }}" class="nav-link @yield('contact')"> 
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Pesan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
             <a class="nav-link d-flex justify-content-start">
               <form action="{{ route('logout') }}" method="POST" class="">
                   @csrf

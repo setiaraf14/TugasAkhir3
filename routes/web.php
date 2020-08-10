@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('kerangka.front.master');
 });
+
+// Route::get('/halaman', function () {
+//     return view('tampilan.halamanutama');
+// });
 
 Route::get('/master', function () {
     return view('kerangka.master');
@@ -25,9 +29,15 @@ Route::get('/master', function () {
 //     return view('divisi.create');
 // });
 
+Route::get('/', 'HalamanUtamaController@index')->name('halamanutama.index');
+Route::get('/tentang', 'HalamanTentangController@index')->name('halamantentang.index');
+Route::get('/detail/{id}', 'HalamanUtamaController@show')->name('halamanutama.show');
+Route::get('/jenis/{id}', 'HalamanUtamaController@jenis')->name('halamanutama.jenis');
+Route::get('/divisi/{id}', 'HalamanDivisiController@show')->name('halamandivisi.show');
+Route::get('/contact/create', 'ContactController@create')->name('contact.create');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 Auth::routes();
-
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'admin'], function () {
@@ -37,6 +47,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/jabatan', 'JabatanController');
         Route::resource('/anggotas', 'AnggotaController');
         Route::resource('/kegiatan', 'KegiatanController');
+        Route::resource('/tentang', 'TentangController');
+        Route::get('/contact', 'ContactController@index' )->name('contact.index');
+        Route::delete('/contact/{contact}', 'ContactController@destroy')->name('contact.destroy');
         Route::get('/home', 'HomeController@index')->name('home'); 
     }); 
 });

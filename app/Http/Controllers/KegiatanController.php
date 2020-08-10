@@ -49,7 +49,7 @@ class KegiatanController extends Controller
             'nama_kegiatan' => 'required|min:10',
             'anggota_id' => 'required',
             'jenis_kegiatan_id' => 'required',
-            'summary_kegiatan' => 'required|max:500',
+            'summary_kegiatan' => 'required',
             'foto_kegiatan' => 'image|max:3000',
             'tanggal_kegiatan' => 'required',
             'alamat_kegiatan' => 'required|max:100'
@@ -101,7 +101,7 @@ class KegiatanController extends Controller
             'nama_kegiatan' => 'required|min:10',
             'anggota_id' => 'required',
             'jenis_kegiatan_id' => 'required',
-            'summary_kegiatan' => 'required|max:500',
+            'summary_kegiatan' => 'required',
             'foto_kegiatan' => 'image|max:3000',
             'tanggal_kegiatan' => 'required',
             'alamat_kegiatan' => 'required|max:100'

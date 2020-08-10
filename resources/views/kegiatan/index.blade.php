@@ -3,9 +3,6 @@
 @section('title', '| Olah Kegiatan')
 @section('kegiatan', 'active')
 
-@section('ckeditor')
-<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
-@endsection
 
 @section('judul')
     <h1>Tabel Data Anggota</h1>
@@ -84,8 +81,5 @@
             });
         </script>
     @endsection 
-    <script>
-        CKEDITOR.replace( 'tufoksi_divisi' );
-    </script>
 @endsection
 

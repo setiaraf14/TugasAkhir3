@@ -3,10 +3,6 @@
 @section('title', '| Olah Jabatan');
 @section('jabatan', 'active')
 
-@section('ckeditor')
-<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
-@endsection
-
 @section('judul')
     <h1>Tabel Data Divisi</h1>
 @endsection
@@ -100,8 +96,6 @@
             });
         </script>
     @endsection 
-    <script>
-        CKEDITOR.replace( 'keterangan_jabatan' );
-    </script>
+    
 @endsection
 

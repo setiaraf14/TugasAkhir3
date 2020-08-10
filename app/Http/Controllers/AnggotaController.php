@@ -46,13 +46,13 @@ class AnggotaController extends Controller
         //
         $validasiData = $request->validate([
             'nama_anggota' => 'required|min:3',
-            'hp_anggota' => 'required|numeric',
-            'ktp_anggota' => 'required|numeric',
+            'hp_anggota' => 'required|min:11|numeric',
+            'ktp_anggota' => 'required|min:12|numeric',
             'alamat_anggota' => 'required',
             'divisi_id' => 'required',
             'jabatan_id' => 'required',
             'profile_anggota' => 'required',
-            'foto_anggota' => 'image|max:3000',
+            'foto_anggota' => 'required|image|max:3000',
             'tanggal_masuk' => 'required'
 
         ]);

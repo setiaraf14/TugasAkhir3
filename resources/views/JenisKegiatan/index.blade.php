@@ -3,10 +3,6 @@
 @section('title', '| Olah Jenis Kegiatan');
 @section('jeniskegiatan', 'active')
 
-@section('ckeditor')
-<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
-@endsection
-
 @section('judul')
     <h1>Tabel Data Jenis Kegiatan</h1>
 @endsection
@@ -18,7 +14,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                       <h3 class="card-title">Data Jenis Kegiatan</h3>
-                      <a href="{{ route('jabatan.create') }}" class="btn btn-primary">Tambah Jenis Kegiatan</a>
+                      <a href="{{ route('jeniskegiatan.create') }}" class="btn btn-primary">Tambah Jenis Kegiatan</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -100,8 +96,5 @@
             });
         </script>
     @endsection 
-    <script>
-        CKEDITOR.replace( 'keterangan_jabatan' );
-    </script>
 @endsection
 

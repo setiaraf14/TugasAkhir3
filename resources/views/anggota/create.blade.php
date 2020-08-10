@@ -100,10 +100,7 @@
                                 <div class="form-group col-lg-6">
                                     <label for="foto_anggota">Masukan foto</label>
                                     <div class="input-group">
-                                      <div class="custom-file">
-                                        <input type="file" class="custom-file-input @error('foto_anggota') is-invalid @enderror" id="foto_anggota" name="foto_anggota">
-                                        <label class="custom-file-label " for="foto_anggota" value="{{ old('foto_anggota') }}">Choose file</label>
-                                      </div>
+                                        <input type="file" class="form-control @error('foto_anggota') is-invalid @enderror" id="foto_anggota" name="foto_anggota" value="{{ old('foto_anggota') }}">
                                     </div>
                                       @error('foto_anggota')
                                      <div class="alert alert-danger">{{ $message }}</div>

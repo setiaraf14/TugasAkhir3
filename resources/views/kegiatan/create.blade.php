@@ -30,7 +30,7 @@
                             <div class="form-row">
                                 <div class="form-group col-lg-6">
                                     <label for="nama_kegiatan">Masukan Judul Kegiatan</label>
-                                    <input type="text" name="nama_kegiatan" class="form-control" @error('nama_kegiatan') ins-invalid @enderror value="{{ old('nama_kegiatan')}}" required>
+                                    <input type="text" name="nama_kegiatan" class="form-control @error('nama_kegiatan') ins-invalid @enderror"  value="{{ old('nama_kegiatan')}}" required>
                                     @error('nama_kegiatan')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -79,13 +79,10 @@
                                 <div class="form-group col-lg-6">
                                     <label for="foto_kegiatan">Masukan Foto Kegiatan</label>
                                     <div class="input-group">
-                                      <div class="custom-file">
-                                        <input type="file" class="custom-file-input @error('foto_kegiatan') is-invalid @enderror" id="foto_kegiatan" name="foto_kegiatan">
-                                        <label class="custom-file-label " for="foto_kegiatan" value="{{ old('foto_kegiatan') }}">Choose file</label>
-                                      </div>
+                                        <input type="file" class="form-control @error('foto_kegiatan') is-invalid @enderror" id="foto_kegiatan" name="foto_kegiatan" value="{{ old('foto_kegiatan') }}">
                                     </div>
                                       @error('foto_kegiatan')
-                                     <div class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                       @enderror
                                 </div>
 
